@@ -1,11 +1,7 @@
-import 'package:skill_bridge_u5b/core/app_core.dart';
-import 'package:flutter/material.dart';
+part of app_splash_screen;
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key})
-      : super(
-          key: key,
-        );
+class SplashScreen extends GetView<SplashScreenController> {
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

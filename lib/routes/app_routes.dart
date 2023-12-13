@@ -1,4 +1,7 @@
-part of root_apps;
+library app_routes;
+
+import 'package:get/get.dart';
+import 'package:skill_bridge_u5b/pages/splash_screen/app_splash_screen.dart';
 
 class AppRoutes {
   static const String registertScreen = '/registert_screen';
@@ -11,6 +14,7 @@ class AppRoutes {
   static const String forgotPasswordAbilScreen = '/forgot_password_abil_screen';
   static const String successFpAbilScreen = '/success_fp_abil_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
+  static const String introductionScreen = '/introduction_screen';
 
   static const INITIAL = splashScreen;
 
@@ -18,6 +22,13 @@ class AppRoutes {
     GetPage(
       name: splashScreen,
       page: () => const SplashScreen(),
+      binding: SplashScreenBinding()
     ),
+    GetPage(
+      name: introductionScreen,
+      page: () => const IntroductionScreen(),
+      binding: SplashScreenBinding()
+    ),
+     
   ];
 }

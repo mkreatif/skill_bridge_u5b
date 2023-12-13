@@ -24,4 +24,12 @@ class CustomButtonStyles {
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
         elevation: MaterialStateProperty.all<double>(0),
       );
+
+  static ButtonStyle get baseStyle => ElevatedButton.styleFrom(
+        backgroundColor: appTheme.blueGray800,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      );
 }

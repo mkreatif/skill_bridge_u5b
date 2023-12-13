@@ -11,12 +11,7 @@ class IntroductionSectionOne extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 16),
           child: GetBuilder<SplashScreenController>(builder: (ctrl) {
             return CustomElevatedButton(
-              buttonStyle: ElevatedButton.styleFrom(
-                  backgroundColor: appTheme.blueGray800,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  )),
+              buttonStyle: CustomButtonStyles.baseStyle,
               onPressed: () {
                 ctrl.introductionTabController.index = 1;
               },

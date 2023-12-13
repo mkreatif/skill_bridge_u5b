@@ -5,20 +5,11 @@ class IntroductionSectionThree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var mediaQueryData = MediaQuery.of(context);
     return SafeArea(
       child: Scaffold(
         extendBody: true,
         extendBodyBehindAppBar: true,
-        body: Container(
-          width: mediaQueryData.size.width,
-          height: mediaQueryData.size.height,
-          decoration: BoxDecoration(
-              color: theme.colorScheme.onPrimaryContainer,
-              gradient: LinearGradient(
-                  begin: const Alignment(0.5, 0),
-                  end: const Alignment(0.5, 1),
-                  colors: [appTheme.indigo300, appTheme.lime100])),
+        body: BaseLayout(
           child: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 58, vertical: 47.v),
@@ -26,7 +17,7 @@ class IntroductionSectionThree extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 CustomImageView(
-                    imagePath: ImageConstant.imgWebHeaderByD,
+                    imagePath: ImageConstant.imageWebHeader,
                     height: 280.v,
                     width: 294),
                 SizedBox(height: 11.v),
@@ -78,7 +69,18 @@ class IntroductionSectionThree extends StatelessWidget {
                             .copyWith(height: 1.33))),
                 SizedBox(height: 48.v),
                 CustomElevatedButton(
-                    width: 206, text: "Selamat Datang!", onPressed: () {}),
+                    buttonStyle: ElevatedButton.styleFrom(
+                      backgroundColor: appTheme.blueGray800,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    width: 206,
+                    text: "Selamat Datang!",
+                    onPressed: () {
+                      Get.offAndToNamed(AppRoutes.choiceScreen);
+                    }),
                 SizedBox(height: 5.v)
               ],
             ),

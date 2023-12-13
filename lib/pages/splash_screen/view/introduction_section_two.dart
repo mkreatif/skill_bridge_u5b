@@ -4,35 +4,31 @@ class IntroductionSectionTwo extends StatelessWidget {
   const IntroductionSectionTwo({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    mediaQueryData = MediaQuery.of(context);
+  Widget build(BuildContext context) { 
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: Container(
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 16),
-          child: GetBuilder<SplashScreenController>(
-            builder: (ctrl) {
-              return CustomElevatedButton(
-                onPressed: () {
-                  ctrl.introductionTabController.index = 2;
-                },
-                width: 206,
-                text: "Explore Sekarang!",
-              );
-            }
-          ),
+          child: GetBuilder<SplashScreenController>(builder: (ctrl) {
+            return CustomElevatedButton(
+              buttonStyle: ElevatedButton.styleFrom(
+                backgroundColor: appTheme.blueGray800,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: () {
+                ctrl.introductionTabController.index = 2;
+              },
+              width: 206,
+              text: "Explore Sekarang!",
+            );
+          }),
         ),
         extendBody: true,
         extendBodyBehindAppBar: true,
-        body: Container(
-          width: mediaQueryData.size.width,
-          height: mediaQueryData.size.height,
-          decoration: BoxDecoration(
-              color: theme.colorScheme.onPrimaryContainer,
-              gradient: LinearGradient(
-                  begin: const Alignment(0.5, 0),
-                  end: const Alignment(0.5, 1),
-                  colors: [appTheme.indigo300, appTheme.lime100])),
+        body: BaseLayout(
           child: Container(
             width: double.maxFinite,
             margin: EdgeInsets.only(top: 44.v),
@@ -100,5 +96,4 @@ class IntroductionSectionTwo extends StatelessWidget {
       ),
     );
   }
-
 }

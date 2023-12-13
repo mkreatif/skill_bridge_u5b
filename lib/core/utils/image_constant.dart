@@ -19,7 +19,7 @@ class ImageConstant {
   static String imgCasualLife3d = '$imagePath/img_casual_life_3d.png';
 
   // Splash ScreenThree images
-  static String imgWebHeaderByD = '$imagePath/img_web_header_by_d.png';
+  static String imageWebHeader = '$imagePath/img_web_header_by_d.png';
 
   // Choice images
   static String imgCasualLife3d99x99 =

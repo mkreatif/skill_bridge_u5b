@@ -68,9 +68,9 @@ extension on TextStyle {
     );
   }
 
-  TextStyle get poppins {
-    return copyWith(
-      fontFamily: 'Poppins',
-    );
-  }
+  // TextStyle get poppins {
+  //   return copyWith(
+  //     fontFamily: 'Poppins',
+  //   );
+  // }
 }

@@ -1,6 +1,7 @@
 library app_routes;
 
 import 'package:get/get.dart';
+import 'package:skill_bridge_u5b/pages/choice_screen/app_choice_screen.dart';
 import 'package:skill_bridge_u5b/pages/splash_screen/app_splash_screen.dart';
 
 class AppRoutes {
@@ -28,6 +29,10 @@ class AppRoutes {
       name: introductionScreen,
       page: () => const IntroductionScreen(),
       binding: SplashScreenBinding()
+    ),
+    GetPage(
+      name: choiceScreen,
+      page: () => const ChoiceScreen(),
     ),
      
   ];

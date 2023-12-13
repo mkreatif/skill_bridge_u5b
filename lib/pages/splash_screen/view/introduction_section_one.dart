@@ -5,14 +5,18 @@ class IntroductionSectionOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: Container(
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 16),
           child: GetBuilder<SplashScreenController>(builder: (ctrl) {
             return CustomElevatedButton(
+              buttonStyle: ElevatedButton.styleFrom(
+                  backgroundColor: appTheme.blueGray800,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  )),
               onPressed: () {
                 ctrl.introductionTabController.index = 1;
               },
@@ -23,20 +27,7 @@ class IntroductionSectionOne extends StatelessWidget {
         ),
         extendBody: true,
         extendBodyBehindAppBar: true,
-        body: Container(
-          width: mediaQueryData.size.width,
-          height: mediaQueryData.size.height,
-          decoration: BoxDecoration(
-            color: theme.colorScheme.onPrimaryContainer,
-            gradient: LinearGradient(
-              begin: const Alignment(0.5, 0),
-              end: const Alignment(0.5, 1),
-              colors: [
-                appTheme.indigo300,
-                appTheme.lime100,
-              ],
-            ),
-          ),
+        body: BaseLayout(
           child: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(

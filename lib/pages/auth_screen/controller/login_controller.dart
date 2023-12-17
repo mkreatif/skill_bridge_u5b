@@ -1,14 +1,12 @@
-part of app_login_screen;
+part of app_auth_screen;
 
 class LoginController extends GetxController {
-  TextEditingController usernameFieldController = TextEditingController();
-
-  TextEditingController passwordFieldController = TextEditingController();
+  List<TextEditingController> tecs =List.generate(2, (index) => TextEditingController());
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   /// Navigates to the registertScreen when the action is triggered.
   onTapRegisterButton(BuildContext context) {
-    Get.offAndToNamed(AppRoutes.registertScreen);
+    Get.offAndToNamed(AppRoutes.registrationScreen);
   }
 }

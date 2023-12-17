@@ -1,4 +1,4 @@
-part of app_login_screen;
+part of app_auth_screen;
 
 class LoginBinding extends Bindings {
   @override

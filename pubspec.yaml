@@ -40,6 +40,7 @@ dependencies:
   flutter_svg: ^2.0.9
   cached_network_image: ^3.3.0
   gap: ^3.0.1
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:

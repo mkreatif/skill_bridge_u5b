@@ -10,12 +10,12 @@ class AppRoutes {
   static const String splashScreen = '/splash_screen';
   static const String choiceScreen = '/choice_screen';
   static const String loginScreen = '/login_screen';
-  static const String forgotPasswordAbilScreen = '/forgot_password_abil_screen';
+  static const String forgotPasswordScreen = '/forgot_password_screen';
   static const String successFpAbilScreen = '/success_fp_abil_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
   static const String introductionScreen = '/introduction_screen';
 
-  static const INITIAL = loginScreen;
+  static const INITIAL = splashScreen;
 
   static final routes = [
     GetPage(
@@ -43,6 +43,13 @@ class AppRoutes {
       name: registrationScreen,
       page: () => RegistrationScreen(),
       binding: RegistrationBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: Duration(milliseconds: 250),
+    ),
+    GetPage(
+      name: forgotPasswordScreen,
+      page: () => ForgotPasswordScreen(),
+      binding: ForgotPasswordBinding(),
       transition: Transition.rightToLeft,
       transitionDuration: Duration(milliseconds: 250),
     ),

@@ -9,6 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// ===[CONSTANT]====
 part 'constants/constants.dart';
@@ -31,3 +32,4 @@ part 'widgets/custom_text_form_field.dart';
 part 'widgets/custom_elevated_button.dart';
 part 'widgets/custom_image_view.dart';
 part 'widgets/base_layout.dart';
+part 'widgets/text_style.dart';

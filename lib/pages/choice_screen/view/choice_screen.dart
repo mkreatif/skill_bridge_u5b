@@ -59,6 +59,9 @@ class ChoiceScreen extends StatelessWidget {
                   title: "Buying",
                   description: "Freelance Services",
                   labelBtn: "Daftar Sekarang Yuk!",
+                  onPressed: () {
+                    Get.offAndToNamed(AppRoutes.registrationScreen);
+                  },
                 ),
                 Gap(20),
                 ChoiceItem(

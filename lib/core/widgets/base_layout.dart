@@ -2,13 +2,16 @@ part of app_core;
 
 class BaseLayout extends StatelessWidget {
   final Widget child;
-  const BaseLayout({Key? key, required this.child}) : super(key: key);
+  final EdgeInsetsGeometry? padding;
+  const BaseLayout({Key? key, required this.child, this.padding})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
       height: Get.height,
+      padding: padding,
       decoration: BoxDecoration(
         color: theme.colorScheme.onPrimaryContainer,
         gradient: LinearGradient(

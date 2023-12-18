@@ -9,7 +9,22 @@ class HomeScreen extends GetView<HomeController> {
       extendBodyBehindAppBar: true,
       extendBody: true,
       body: BaseLayout(
-        child: Container(),
+        child: Obx(
+          () => IndexedStack(
+            index: controller.index.value,
+            children: [
+              Container(
+                color: Colors.amber,
+              ),
+              Container(
+                color: Colors.red,
+              ),
+              Container(
+                color: Colors.yellow,
+              )
+            ],
+          ),
+        ),
       ),
       bottomNavigationBar: Obx(() => BottomNavigationBar(
             iconSize: 30,

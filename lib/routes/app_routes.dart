@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:skill_bridge_u5b/pages/choice_screen/app_choice_screen.dart';
 import 'package:skill_bridge_u5b/pages/auth_screen/app_auth_screen.dart';
 import 'package:skill_bridge_u5b/pages/splash_screen/app_splash_screen.dart';
+import 'package:skill_bridge_u5b/pages/user/app_user_library.dart';
 
 class AppRoutes {
   static const String registrationScreen = '/registration_screen';
@@ -14,8 +15,9 @@ class AppRoutes {
   static const String successFpAbilScreen = '/success_fp_abil_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
   static const String introductionScreen = '/introduction_screen';
+  static const String userHomeScreen = '/user_home_screen';
 
-  static const INITIAL = splashScreen;
+  static const INITIAL = userHomeScreen;
 
   static final routes = [
     GetPage(
@@ -50,6 +52,13 @@ class AppRoutes {
       name: forgotPasswordScreen,
       page: () => ForgotPasswordScreen(),
       binding: ForgotPasswordBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: Duration(milliseconds: 250),
+    ),
+    GetPage(
+      name: userHomeScreen,
+      page: () => HomeScreen(),
+      binding: HomeBinding(),
       transition: Transition.rightToLeft,
       transitionDuration: Duration(milliseconds: 250),
     ),

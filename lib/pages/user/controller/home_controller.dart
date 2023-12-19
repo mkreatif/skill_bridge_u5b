@@ -49,4 +49,8 @@ class HomeController extends GetxController {
       }
     });
   }
+
+  Future<bool> onWillPopScope() async {
+    return await DialogCollection.confirmation(message: "Anda akan keluar dari aplikasi?");
+  }
 }

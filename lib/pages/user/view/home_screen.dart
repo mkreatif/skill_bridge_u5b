@@ -16,9 +16,7 @@ class HomeScreen extends GetView<HomeController> {
               Container(
                 color: Colors.amber,
               ),
-              Container(
-                color: Colors.red,
-              ),
+              DashboardScreen(),
               Container(
                 color: Colors.yellow,
               )

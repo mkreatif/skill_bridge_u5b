@@ -1,5 +1,10 @@
 part of app_core;
 
+class FontFamily {
+  static const poppins = "Poppins";
+  
+}
+
 TextStyle safeGoogleFont(
   String fontFamily, {
   TextStyle? textStyle,

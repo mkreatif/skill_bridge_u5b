@@ -1,32 +1,34 @@
 part of app_core;
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
-    Key? key,
-    this.alignment,
-    this.width,
-    this.controller,
-    this.focusNode,
-    this.autofocus = false,
-    this.textStyle,
-    this.obscureText = false,
-    this.textInputAction = TextInputAction.next,
-    this.textInputType = TextInputType.text,
-    this.maxLines,
-    this.hintText,
-    this.hintStyle,
-    this.prefix,
-    this.prefixConstraints,
-    this.suffix,
-    this.suffixConstraints,
-    this.contentPadding,
-    this.borderDecoration,
-    this.fillColor,
-    this.filled = true,
-    this.validator,
-  }) : super(
+  const CustomTextFormField(
+      {Key? key,
+      this.alignment,
+      this.width,
+      this.controller,
+      this.focusNode,
+      this.autofocus = false,
+      this.textStyle,
+      this.obscureText = false,
+      this.textInputAction = TextInputAction.next,
+      this.textInputType = TextInputType.text,
+      this.maxLines,
+      this.hintText,
+      this.hintStyle,
+      this.prefix,
+      this.prefixConstraints,
+      this.suffix,
+      this.suffixConstraints,
+      this.contentPadding,
+      this.borderDecoration,
+      this.fillColor,
+      this.filled = true,
+      this.validator,
+      this.borderRadius = 6})
+      : super(
           key: key,
         );
+  final double borderRadius;
 
   final Alignment? alignment;
 
@@ -108,17 +110,17 @@ class CustomTextFormField extends StatelessWidget {
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: BorderSide.none,
             ),
         enabledBorder: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: BorderSide.none,
             ),
         focusedBorder: borderDecoration ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(borderRadius),
               borderSide: BorderSide.none,
             ),
       );

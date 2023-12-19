@@ -1,11 +1,11 @@
-library app_core;
-
+library app_core; 
 import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
@@ -34,3 +34,4 @@ part 'widgets/custom_image_view.dart';
 part 'widgets/base_layout.dart';
 part 'widgets/text_style.dart';
 part 'widgets/active_icon.dart';
+part 'widgets/dialog_collection.dart';

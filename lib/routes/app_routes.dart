@@ -17,7 +17,7 @@ class AppRoutes {
   static const String introductionScreen = '/introduction_screen';
   static const String userHomeScreen = '/user_home_screen';
 
-  static const INITIAL = userHomeScreen;
+  static const INITIAL = splashScreen;
 
   static final routes = [
     GetPage(

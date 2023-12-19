@@ -91,6 +91,16 @@ class DashboardScreen extends GetView<HomeController> {
                   color: appTheme.blueGray800,
                   fontSize: 18,
                 ),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 8),
+                  height: 150,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: controller.popularGigs
+                        .map((e) => CardPopularGigs(gig: e))
+                        .toList(),
+                  ),
+                ),
                 CustomDivider(
                   label: "Another You Like",
                   color: appTheme.blueGray800,

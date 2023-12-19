@@ -32,6 +32,9 @@ class ImageConstant {
 
   // Common images
   static String imgVector = '$imagePath/img_vector.svg';
+  static String dummy1 = '$imagePath/dummy_1.png';
+  static String dummy2 = '$imagePath/dummy_2.png';
+  static String dummy3 = '$imagePath/dummy_3.png';
 
   static String imageNotFound = 'assets/images/image_not_found.png';
 }

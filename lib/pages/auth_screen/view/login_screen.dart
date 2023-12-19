@@ -70,6 +70,9 @@ class LoginScreen extends GetView<LoginController> {
                       buttonStyle: CustomButtonStyles.baseStyle,
                       width: 128,
                       text: "Masuk",
+                      onPressed: (){
+                        Get.offAndToNamed(AppRoutes.userHomeScreen);
+                      },
                       alignment: Alignment.center,
                     ),
                     Gap(14),

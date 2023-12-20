@@ -42,6 +42,7 @@ dependencies:
   gap: ^3.0.1
   google_fonts: ^6.1.0
   hexcolor: ^3.0.1
+  
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,15 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  icons_launcher: ^2.1.6
+
+icons_launcher:
+  image_path: 'assets/images/img_logo.png'
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

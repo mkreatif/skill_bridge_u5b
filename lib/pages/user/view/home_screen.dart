@@ -13,17 +13,24 @@ class HomeScreen extends GetView<HomeController> {
         extendBodyBehindAppBar: true,
         extendBody: true,
         body: BaseLayout(
+          padding: EdgeInsets.only(bottom: 65),
           child: Obx(
             () => IndexedStack(
               index: controller.index.value,
               children: [
                 Container(
-                  color: Colors.amber,
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Text("This feature is still under development,"),
+                  ),
                 ),
                 DashboardScreen(),
                 Container(
-                  color: Colors.yellow,
-                )
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Text("This feature is still under development,"),
+                  ),
+                ),
               ],
             ),
           ),

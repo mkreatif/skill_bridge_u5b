@@ -4,7 +4,7 @@ class HomeController extends GetxController {
   final ScrollController dashboardScroll = ScrollController();
   final RxBool isPinnedDashboard = RxBool(false);
   final RxInt index = RxInt(1);
-  
+
   final List<PopularGigs> popularGigs = [
     PopularGigs(
       name: "Ahong",
@@ -38,6 +38,37 @@ class HomeController extends GetxController {
     ),
   ];
 
+  final List<AnotherYouLikeItem> anotherYouLike = [
+    AnotherYouLikeItem(
+      price: "250.000",
+      description:
+          "I will design modern minimalist luxury business logo design",
+      name: "Jiyad",
+      imagePath: "${ImageConstant.imagePath}/ayl_1.png",
+    ),
+    AnotherYouLikeItem(
+      price: "250.000",
+      description:
+          "I will design modern minimalist luxury business logo design",
+      name: "Kendal Jenner",
+      imagePath: "${ImageConstant.imagePath}/ayl_2.png",
+    ),
+    AnotherYouLikeItem(
+      price: "250.000",
+      description:
+          "I will design modern minimalist luxury business logo design",
+      name: "Reisa Sodikin",
+      imagePath: "${ImageConstant.imagePath}/ayl_3.png",
+    ),
+    AnotherYouLikeItem(
+      price: "250.000",
+      description:
+          "I will design modern minimalist luxury business logo design",
+      name: "Helper",
+      imagePath: "${ImageConstant.imagePath}/ayl_1.png",
+    ),
+  ];
+
   @override
   void onInit() {
     super.onInit();
@@ -51,6 +82,7 @@ class HomeController extends GetxController {
   }
 
   Future<bool> onWillPopScope() async {
-    return await DialogCollection.confirmation(message: "Anda akan keluar dari aplikasi?");
+    return await DialogCollection.confirmation(
+        message: "Anda akan keluar dari aplikasi?");
   }
 }

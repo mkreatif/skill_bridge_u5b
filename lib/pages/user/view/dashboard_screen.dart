@@ -106,7 +106,8 @@ class DashboardScreen extends GetView<HomeController> {
                   color: appTheme.blueGray800,
                   fontSize: 18,
                   textDirection: TextDirection.rtl,
-                )
+                ),
+                ...controller.anotherYouLike
               ],
             ),
           ),

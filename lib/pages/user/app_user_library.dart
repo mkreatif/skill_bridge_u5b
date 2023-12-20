@@ -15,3 +15,4 @@ part 'binding/home_binding.dart';
 part 'widget/project_progress.dart';
 part 'widget/custom_divider.dart';
 part 'widget/card_popular_gigs.dart';
+part 'widget/another_you_like.dart';
